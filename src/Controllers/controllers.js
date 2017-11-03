@@ -6,6 +6,8 @@ router.post('/addCustomer',Action.addCustomer);
 
 router.get('/getCustomer',Action.getCustomer);
 
+router.get('/getCustomerById',Action.getCustomerById);
+
 router.post('/queryCustomerName',Action.queryString);
 
 router.post('/editCustomer',Action.editCustomer);

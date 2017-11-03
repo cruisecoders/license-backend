@@ -28,13 +28,19 @@ module.exports = {
             res.json({ status:true,data:editCustomerRes });
         });
     },
+    getCustomerById : function(req,res) {
+        const id = req.query.id;
+        CustomerModal.findCustomerById(id,data,async (customer) => {
+            res.json({ status:true,data:customer });
+        });
+    },
     generateLicense: function(req,res) {
         const data = req.body.data
         const numberOfLicenses = parseInt(req.body.numberOfLicenses);
         let generatedLicenseKey = [];
-        CustomerModal.findCustomerName(data.customerId, async(customerNameRes) => {
+        CustomerModal.findCustomerById(data.customerId, async(customerNameRes) => {
             if(customerNameRes) {
-                data['customerName'] = customerNameRes;
+                data['customerName'] = customerNameRes.customerName;
                 for(i=0;i<numberOfLicenses;i++) {
                     LicenseModal.insert(data,async (addLicenseKeyRes) => {
                         if(!addLicenseKeyRes) {

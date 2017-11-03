@@ -50,11 +50,11 @@ module.exports = {
             callback(error? {} : data)
         })
     },
-    findCustomerName: function (customerId,callback) {
+    findCustomerById: function (customerId,callback) {
         Customers.findOne({
             'customerId':customerId
         },function(error,data) {
-            callback(error? false: (data === null)? false: data.customerName);
+            callback(error? false: (data === null)? false: data);
         });
     },
     findByName: function(searchString,callback) {
