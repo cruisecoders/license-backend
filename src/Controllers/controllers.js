@@ -18,6 +18,8 @@ router.get('/getLicenseFile',Action.getLicenseFiles);
 
 router.get('/getLicenseByCustomer',Action.getLicenseByCustomer);
 
+router.get('/getLicenseFileByCustomer',Action.getLicenseFileByCustomer);
+
 router.get('/getLicenseFileById',Action.getLicenseFileById);
 
 module.exports = router;
