@@ -16,6 +16,8 @@ router.get('/getLicense',Action.getAllLicense);
 
 router.get('/getLicenseFile',Action.getLicenseFiles);
 
+router.get('/getLicenseByCustomer',Action.getLicenseByCustomer);
+
 router.get('/getLicenseFileById',Action.getLicenseFileById);
 
 module.exports = router;

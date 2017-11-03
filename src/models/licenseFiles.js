@@ -39,5 +39,13 @@ module.exports = {
         },function(error,data) {
             callback(error? false: (data === null)? false: data);
         });
+    },
+    findByName: function(searchString,callback) {
+        const regex = new RegExp(searchString)
+        LicensesFiles.find({
+            customerName: { $regex: regex  }
+        },function(error,data) {
+            callback(error? false: (data === null)? false: data);
+        })
     }
 }

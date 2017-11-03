@@ -96,6 +96,26 @@ module.exports = {
                 res.json({ status:true,data:'No Matching Results' });
             }
         })
-    }
+    },
+    getLicenseByCustomer:  function(req,res) {
+        const searchString = req.body.query;
+        LicenseModal.findByName(searchString, async (matchedResults) => {
+            if(matchedResults) {
+                res.json({ status:true,data:matchedResults });
+            } else {
+                res.json({ status:true,data:'No Matching Results' });
+            }
+        })
+    },
+    getLicenseFileByCustomer:  function(req,res) {
+        const searchString = req.body.query;
+        LicenseFileModal.findByName(searchString, async (matchedResults) => {
+            if(matchedResults) {
+                res.json({ status:true,data:matchedResults });
+            } else {
+                res.json({ status:true,data:'No Matching Results' });
+            }
+        })
+    },
 }
     
