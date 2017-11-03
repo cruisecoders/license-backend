@@ -16,10 +16,10 @@ router.get('/getLicense',Action.getAllLicense);
 
 router.get('/getLicenseFile',Action.getLicenseFiles);
 
-router.get('/getLicenseByCustomer',Action.getLicenseByCustomer);
+router.post('/getLicenseByCustomer',Action.getLicenseByCustomer);
 
-router.get('/getLicenseFileByCustomer',Action.getLicenseFileByCustomer);
+router.post('/getLicenseFileByCustomer',Action.getLicenseFileByCustomer);
 
 router.get('/getLicenseFileById',Action.getLicenseFileById);
 
-module.exports = router;
+module.exports = router;    

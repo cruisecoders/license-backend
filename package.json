@@ -2,11 +2,14 @@
   "name": "license",
   "version": "1.0.0",
   "description": "To add customer license",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node":">=8.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start":"node server.js",
-    "build":"set NODE_ENV=production && node server.js"
+    "build":"set PORT=3000 && node server.js"
   },
   "author": "",
   "license": "ISC",
