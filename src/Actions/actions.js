@@ -30,7 +30,7 @@ module.exports = {
     },
     getCustomerById : function(req,res) {
         const id = req.query.id;
-        CustomerModal.findCustomerById(id,data,async (customer) => {
+        CustomerModal.findCustomerById(id,async (customer) => {
             res.json({ status:true,data:customer });
         });
     },
